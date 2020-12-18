@@ -47,6 +47,12 @@ message Tracing {
     string address = 1;
   }
 
+  // Skywalking defines configuration for a Skywalking tracer.
+  message Skywalking {
+    // Address of the Skywalking oap service (e.g. _skywalking-oap:11800_).
+    string address = 1;
+  }
+
   // Defines configuration for a Lightstep tracer.
   message Lightstep {
     // Address of the Lightstep Satellite pool.
@@ -139,6 +145,8 @@ message Tracing {
     Stackdriver stackdriver = 4;
     // Use an OpenCensus tracer exporting to an OpenCensus agent.
     OpenCensusAgent open_census_agent = 9;
+    // Use a Skywalking tracer.
+    Skywalking skywalking = 10;
   }
 
   // Configure custom tags that will be added to any active span.

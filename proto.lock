@@ -36718,6 +36718,11 @@
                 "type": "OpenCensusAgent"
               },
               {
+                "id": 10,
+                "name": "skywalking",
+                "type": "Skywalking"
+              },
+              {
                 "id": 6,
                 "name": "max_path_tag_length",
                 "type": "uint32"
@@ -36746,6 +36751,16 @@
             "messages": [
               {
                 "name": "Zipkin",
+                "fields": [
+                  {
+                    "id": 1,
+                    "name": "address",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "name": "Skywalking",
                 "fields": [
                   {
                     "id": 1,
@@ -37084,6 +37099,11 @@
                 "id": 32,
                 "name": "proxy_stats_matcher",
                 "type": "ProxyStatsMatcher"
+              },
+              {
+                "id": 33,
+                "name": "hold_application_until_proxy_starts",
+                "type": "google.protobuf.BoolValue"
               }
             ],
             "maps": [

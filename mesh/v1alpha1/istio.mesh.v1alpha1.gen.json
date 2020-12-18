@@ -885,6 +885,16 @@
                       "$ref": "#/components/schemas/istio.mesh.v1alpha1.Tracing.OpenCensusAgent"
                     }
                   }
+                },
+                {
+                  "required": [
+                    "skywalking"
+                  ],
+                  "properties": {
+                    "skywalking": {
+                      "$ref": "#/components/schemas/istio.mesh.v1alpha1.Tracing.Skywalking"
+                    }
+                  }
                 }
               ]
             }
@@ -936,6 +946,16 @@
             "properties": {
               "openCensusAgent": {
                 "$ref": "#/components/schemas/istio.mesh.v1alpha1.Tracing.OpenCensusAgent"
+              }
+            }
+          },
+          {
+            "required": [
+              "skywalking"
+            ],
+            "properties": {
+              "skywalking": {
+                "$ref": "#/components/schemas/istio.mesh.v1alpha1.Tracing.Skywalking"
               }
             }
           }
@@ -1019,6 +1039,17 @@
         "properties": {
           "address": {
             "description": "Address of the Zipkin service (e.g. _zipkin:9411_).",
+            "type": "string",
+            "format": "string"
+          }
+        }
+      },
+      "istio.mesh.v1alpha1.Tracing.Skywalking": {
+        "description": "Skywalking defines configuration for a Skywalking tracer.",
+        "type": "object",
+        "properties": {
+          "address": {
+            "description": "Address of the Skywalking oap service (e.g. _skywalking-oap:11800_).",
             "type": "string",
             "format": "string"
           }
